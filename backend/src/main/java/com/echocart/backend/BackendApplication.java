@@ -1,4 +1,4 @@
-package com.echochart.backend;
+package com.echocart.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

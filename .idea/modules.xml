@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/echo-chart.iml" filepath="$PROJECT_DIR$/.idea/echo-chart.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/echo-cart.iml" filepath="$PROJECT_DIR$/.idea/echo-cart.iml" />
     </modules>
   </component>
 </project>

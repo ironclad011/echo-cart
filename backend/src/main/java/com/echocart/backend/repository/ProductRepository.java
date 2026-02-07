@@ -16,14 +16,14 @@ public class ProductRepository {
 
     private final RowMapper<Product> productRowMapper = (rs,rowNum)->
             new Product(
-                    rs.getLong("productID"),
+                    rs.getLong("product_id"),
                     rs.getString("url"),
-                    rs.getString("productName"),
+                    rs.getString("name"),
                     rs.getBoolean("deleted_flag")
             );
 
     public List<Product> findAll(){
-        String sql = "SELECT productID, productName, url, deleted_flag FROM product WHERE deleted_flag = false";
+        String sql = "SELECT product_id, name, url, deleted_flag FROM product WHERE deleted_flag = false";
         return jdbcTemplate.query(sql, productRowMapper);
     }
 }

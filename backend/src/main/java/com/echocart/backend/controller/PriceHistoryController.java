@@ -18,4 +18,13 @@ public class PriceHistoryController {
     public List<PriceHistory> getPriceHistory(@PathVariable("productId") Long productId){
         return priceHistoryService.getPriceHistoryForProduct(productId);
     }
+
+    @PostMapping("/{productId}/prices")
+    public void addPrice(
+            @PathVariable("productId") Long productId,
+            @RequestBody PriceHistory priceHistory){
+        priceHistoryService.addPriceForProduct(productId,priceHistory);
+    }
+
+
 }

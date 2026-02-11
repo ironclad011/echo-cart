@@ -9,6 +9,7 @@ public class PriceHistory {
     private LocalDateTime recordedAt;
     private String source;
 
+    public PriceHistory(){}
     public PriceHistory(Long priceId, Long productId, BigDecimal price, LocalDateTime recordedAt, String source) {
         this.priceId = priceId;
         this.productId = productId;

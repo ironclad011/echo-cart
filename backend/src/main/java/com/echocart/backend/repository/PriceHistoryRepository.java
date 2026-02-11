@@ -25,4 +25,17 @@ public class PriceHistoryRepository {
         String sql = "SELECT price_id,product_id,price,recorded_at,source FROM price_history WHERE product_id = ?";
         return jdbcTemplate.query(sql,priceHistoryRowMapper,ProductId);
     }
+
+    public void insertPrice(Long productId, PriceHistory priceHistory){
+        String sql = """
+                INSERT INTO price_history (product_id,price,source) VALUES (?,?,?)
+                """;
+        jdbcTemplate.update(
+                sql,
+                productId,
+                priceHistory.getPrice(),
+                priceHistory.getSource()
+        );
+
+    }
 }

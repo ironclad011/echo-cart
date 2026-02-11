@@ -16,4 +16,8 @@ public class PriceHistoryService {
     public List<PriceHistory> getPriceHistoryForProduct(Long productId){
         return priceHistoryRepository.findByProductId(productId);
     }
+
+    public void addPriceForProduct(Long productId, PriceHistory priceHistory){
+        priceHistoryRepository.insertPrice(productId,priceHistory);
+    }
 }

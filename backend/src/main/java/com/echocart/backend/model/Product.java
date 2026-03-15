@@ -5,12 +5,15 @@ public class Product {
     private String productName;
     private String url;
     private boolean deleted_flag;
+    //update
+    private String searchKeywords;
 
-    public Product(long productID, String productName, String url, boolean deleted_flag) {
+    public Product(long productID, String productName, String url, boolean deleted_flag,String searchKeywords) {
         this.productID = productID;
         this.productName = productName;
         this.url = url;
         this.deleted_flag = deleted_flag;
+        this.searchKeywords = searchKeywords;
     }
 
     public long getProductID(){
@@ -27,5 +30,9 @@ public class Product {
 
     public boolean isDeleted(){
         return deleted_flag;
+    }
+
+    public String getSearchKeywords(){
+        return searchKeywords;
     }
 }

@@ -19,11 +19,12 @@ public class ProductRepository {
                     rs.getLong("product_id"),
                     rs.getString("url"),
                     rs.getString("name"),
-                    rs.getBoolean("deleted_flag")
+                    rs.getBoolean("deleted_flag"),
+                    rs.getString("search_keywords")
             );
 
     public List<Product> findAll(){
-        String sql = "SELECT product_id, name, url, deleted_flag FROM product WHERE deleted_flag = false";
+        String sql = "SELECT product_id, name, url, deleted_flag, search_keywords FROM product WHERE deleted_flag = false";
         return jdbcTemplate.query(sql, productRowMapper);
     }
 }
